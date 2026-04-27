@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotoscope Motion Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        /* Hide scrollbar for the horizontal tutorial section */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-neutral-400 font-sans antialiased selection:bg-neutral-800 selection:text-white">
+
+    <nav class="w-full border-b border-neutral-900 bg-[#0a0a0a]/90 backdrop-blur-md fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="text-lg font-semibold tracking-wide text-white hover:text-neutral-300 transition">← Back to Hub</a>
+            </div>
+            <div class="text-sm font-medium text-neutral-500">Rotoscope Study</div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-16 px-6 max-w-7xl mx-auto flex items-center min-h-[80vh]">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+            
+            <div class="order-2 lg:order-1 text-center lg:text-left">
+                <p class="text-xs font-bold tracking-[0.2em] text-neutral-600 uppercase mb-4">Project 02</p>
+                <h1 class="text-5xl md:text-6xl font-medium text-white mb-6 tracking-tight">
+                    Frame-by-Frame <br> Motion.
+                </h1>
+                <p class="text-neutral-400 max-w-md mx-auto lg:mx-0 leading-relaxed mb-8">
+                    A stylized study of traced movement. We utilized the Roto Brush tool to isolate and stylize moving subjects over a 60-second sequence, testing our compositing workflow.
+                </p>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-2">
+                    <span class="px-3 py-1 border border-neutral-800 rounded-full text-xs text-neutral-400 bg-neutral-900/50">After Effects</span>
+                    <span class="px-3 py-1 border border-neutral-800 rounded-full text-xs text-neutral-400 bg-neutral-900/50">Premiere Pro</span>
+                    <span class="px-3 py-1 border border-neutral-800 rounded-full text-xs text-neutral-400 bg-neutral-900/50">CapCut</span>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 w-full">
+                <div class="aspect-[4/3] md:aspect-video lg:aspect-square xl:aspect-video bg-neutral-900/30 rounded-[2rem] p-3 border border-neutral-800 transition-transform duration-500">
+                    <div class="w-full h-full bg-neutral-950 border border-neutral-800/50 rounded-[1.5rem] overflow-hidden relative flex items-center justify-center group">
+                        <div class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center pl-1 cursor-pointer group-hover:scale-110 transition-transform shadow-lg">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-neutral-900/20 border-y border-neutral-900 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
+            <div>
+                <h2 class="text-3xl font-medium text-white">The Process</h2>
+                <p class="text-neutral-500 mt-2">Swipe to see how it was made</p>
+            </div>
+        </div>
+
+        <div class="flex overflow-x-auto hide-scroll snap-x snap-mandatory px-6 pb-8 gap-6 max-w-7xl mx-auto">
+            
+            <div class="snap-center shrink-0 w-[85vw] md:w-[400px] bg-neutral-900/40 border border-neutral-800/60 rounded-2xl p-8 hover:border-neutral-700 transition-colors">
+                <span class="text-5xl font-light text-neutral-700 block mb-6">01</span>
+                <h4 class="text-xl font-medium text-white mb-3">Source Material</h4>
+                <p class="text-sm leading-relaxed mb-6">Choose high-quality video with clear subject-background contrast and interesting movement patterns.</p>
+                <div class="aspect-video bg-neutral-950 rounded-xl border border-neutral-800/60 flex items-center justify-center text-xs text-neutral-600">Media Here</div>
+            </div>
+
+            <div class="snap-center shrink-0 w-[85vw] md:w-[400px] bg-neutral-900/40 border border-neutral-800/60 rounded-2xl p-8 hover:border-neutral-700 transition-colors">
+                <span class="text-5xl font-light text-neutral-700 block mb-6">02</span>
+                <h4 class="text-xl font-medium text-white mb-3">Clip Splicing</h4>
+                <p class="text-sm leading-relaxed mb-6">Use CapCut to split the selected video into 5-second segments for much easier rendering and editing.</p>
+                <div class="aspect-video bg-neutral-950 rounded-xl border border-neutral-800/60 flex items-center justify-center text-xs text-neutral-600">Media Here</div>
+            </div>
+
+            <div class="snap-center shrink-0 w-[85vw] md:w-[400px] bg-neutral-900/40 border border-neutral-800/60 rounded-2xl p-8 hover:border-neutral-700 transition-colors">
+                <span class="text-5xl font-light text-neutral-700 block mb-6">03</span>
+                <h4 class="text-xl font-medium text-white mb-3">Compositions</h4>
+                <p class="text-sm leading-relaxed mb-6">In After Effects, create a separate 5-second composition for each clip segment to maintain organization.</p>
+                <div class="aspect-video bg-neutral-950 rounded-xl border border-neutral-800/60 flex items-center justify-center text-xs text-neutral-600">Media Here</div>
+            </div>
+            
+            <div class="snap-center shrink-0 w-[85vw] md:w-[400px] bg-neutral-900/40 border border-neutral-800/60 rounded-2xl p-8 hover:border-neutral-700 transition-colors">
+                <span class="text-5xl font-light text-neutral-700 block mb-6">04</span>
+                <h4 class="text-xl font-medium text-white mb-3">Roto Brushing</h4>
+                <p class="text-sm leading-relaxed mb-6">Trace the subject layer by layer, freezing the frames to lock in the brush strokes and ensure consistency.</p>
+                <div class="aspect-video bg-neutral-950 rounded-xl border border-neutral-800/60 flex items-center justify-center text-xs text-neutral-600">Media Here</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+            <p class="text-xs font-bold tracking-[0.2em] text-neutral-600 uppercase mb-4">Milestones</p>
+            <h2 class="text-3xl font-medium text-white">Weekly Progress</h2>
+            <p class="text-neutral-500 mt-2">The evolution of our project, documented.</p>
+        </div>
+        
+        <div class="flex flex-col gap-6">
+            
+            <div class="flex flex-col md:flex-row bg-neutral-900/30 border border-neutral-800/60 rounded-2xl p-4 hover:border-neutral-700 transition-colors duration-300 gap-6 items-center">
+                <div class="w-full md:w-2/5 aspect-video bg-neutral-950 rounded-xl overflow-hidden relative border border-neutral-800/60 shrink-0 group">
+                    <div class="absolute inset-0 flex items-center justify-center cursor-pointer">
+                        <svg class="w-10 h-10 text-white opacity-50 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/5 pb-4 md:pb-0 px-2">
+                    <span class="text-xs font-bold text-neutral-500 uppercase tracking-widest block mb-2">Week 01</span>
+                    <h3 class="text-2xl font-medium text-white mb-2">Footage & Planning</h3>
+                    <p class="text-neutral-400 text-sm leading-relaxed">We finalized our source video and chopped it into the required segments. The first test traces were completed to establish our art style.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row bg-neutral-900/30 border border-neutral-800/60 rounded-2xl p-4 hover:border-neutral-700 transition-colors duration-300 gap-6 items-center">
+                <div class="w-full md:w-2/5 aspect-video bg-neutral-950 rounded-xl overflow-hidden relative border border-neutral-800/60 shrink-0 group">
+                    <div class="absolute inset-0 flex items-center justify-center cursor-pointer">
+                        <svg class="w-10 h-10 text-white opacity-50 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/5 pb-4 md:pb-0 px-2">
+                    <span class="text-xs font-bold text-neutral-500 uppercase tracking-widest block mb-2">Week 02</span>
+                    <h3 class="text-2xl font-medium text-white mb-2">Base Tracing</h3>
+                    <p class="text-neutral-400 text-sm leading-relaxed">Completed the rough roto brush passes for the first 15 seconds of the video, ensuring the subject was completely separated from the background.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row bg-neutral-900/30 border border-neutral-800/60 rounded-2xl p-4 hover:border-neutral-700 transition-colors duration-300 gap-6 items-center">
+                <div class="w-full md:w-2/5 aspect-video bg-neutral-950 rounded-xl overflow-hidden relative border border-neutral-800/60 shrink-0 group">
+                    <div class="absolute inset-0 flex items-center justify-center cursor-pointer">
+                        <svg class="w-10 h-10 text-white opacity-50 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/5 pb-4 md:pb-0 px-2">
+                    <span class="text-xs font-bold text-neutral-500 uppercase tracking-widest block mb-2">Week 03</span>
+                    <h3 class="text-2xl font-medium text-white mb-2">Stylization & Colors</h3>
+                    <p class="text-neutral-400 text-sm leading-relaxed">Began applying the solid fills to the isolated layers, bringing the illustrated look to life across the early compositions.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-neutral-900 text-center">
+        <p class="text-neutral-600 text-sm font-medium">
+            Academic Project • Multimedia and Authoring
+        </p>
+    </footer>
+
+</body>
+</html>
