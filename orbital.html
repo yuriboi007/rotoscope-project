@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbital Study • Ullyzes Zabdiel Olorga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#050508] text-neutral-400 antialiased selection:bg-violet-900 selection:text-white">
+
+    <header class="fixed top-0 w-full z-50 bg-[#050508]/80 backdrop-blur-md border-b border-[#1a1a24] px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <a href="index.html" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-400 hover:text-violet-400 transition-colors flex items-center gap-2">
+                ← Back to Hub
+            </a>
+        </div>
+        <div class="text-sm font-medium tracking-wide text-neutral-300">
+            Case Study <span class="text-violet-500 mx-2">|</span> 3D Orbital
+        </div>
+    </header>
+
+    <section class="pt-32 pb-16 px-6 max-w-7xl mx-auto">
+        <p class="text-xs font-bold tracking-[0.3em] text-violet-400 uppercase mb-4">Project 01</p>
+        <h1 class="text-5xl md:text-6xl font-black text-white mb-16 tracking-tight">System Dynamics.</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-[#0a0a0f] border border-[#1a1a24] rounded-2xl p-8 hover:border-violet-500/30 transition-colors">
+                <span class="text-xs font-bold text-neutral-600 uppercase tracking-widest block mb-3">Tools</span>
+                <h3 class="text-xl font-bold text-white mb-3">Software Stack</h3>
+                <p class="text-sm leading-relaxed text-neutral-500">Pipeline used Blender for scene building, keyframing, and rendering, with lightweight post-editing.</p>
+            </div>
+            <div class="bg-[#0a0a0f] border border-[#1a1a24] rounded-2xl p-8 hover:border-violet-500/30 transition-colors">
+                <span class="text-xs font-bold text-neutral-600 uppercase tracking-widest block mb-3">Design</span>
+                <h3 class="text-xl font-bold text-white mb-3">Visual Objective</h3>
+                <p class="text-sm leading-relaxed text-neutral-500">Emphasizes smooth orbital paths, clear focal points, and readable scale relationships between bodies.</p>
+            </div>
+            <div class="bg-[#0a0a0f] border border-[#1a1a24] rounded-2xl p-8 hover:border-violet-500/30 transition-colors">
+                <span class="text-xs font-bold text-neutral-600 uppercase tracking-widest block mb-3">Build</span>
+                <h3 class="text-xl font-bold text-white mb-3">Key Features</h3>
+                <p class="text-sm leading-relaxed text-neutral-500">Final output includes animated camera travel, lighting, and an interactive data calculator below.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <div class="bg-[#0a0a0f] border border-[#1a1a24] rounded-2xl p-8 md:p-10">
+            <span class="text-xs font-bold text-violet-500 uppercase tracking-widest block mb-4">Development</span>
+            <h3 class="text-2xl font-bold text-white mb-6">Production specifics</h3>
+            <ul class="space-y-4 text-sm text-neutral-400">
+                <li class="flex gap-3"><span class="text-violet-500">•</span> Orbital paths were blocked first to lock scene rhythm before camera passes.</li>
+                <li class="flex gap-3"><span class="text-violet-500">•</span> Lighting was tuned for silhouette clarity so each planet remains identifiable.</li>
+                <li class="flex gap-3"><span class="text-violet-500">•</span> Render output was exported at presentation-friendly resolution.</li>
+            </ul>
+        </div>
+
+        <div class="bg-gradient-to-br from-[#0a0a0f] to-[#120a24] border border-violet-900/50 rounded-2xl p-8 md:p-10 relative overflow-hidden shadow-[0_0_40px_rgba(139,92,246,0.1)]">
+            <span class="text-xs font-bold text-violet-400 uppercase tracking-widest block mb-4 relative z-10">Interactive Layer</span>
+            <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Planetary Time Calculator</h3>
+            <p class="text-sm mb-8 relative z-10 text-neutral-400">This utility converts Earth years into equivalent planetary years. Enter a number below to dynamically update the data grid.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-3 relative z-10">
+                <input type="number" id="earthYears" value="1" min="0" class="w-full bg-[#050508] border border-[#2a2a3a] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-violet-500 transition-colors" placeholder="Earth Years">
+                <button onclick="calculateYears()" class="bg-violet-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-violet-500 transition-colors shadow-[0_0_15px_rgba(139,92,246,0.4)] whitespace-nowrap">Calculate</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-black text-white mb-10 tracking-tight border-b border-[#1a1a24] pb-6">Celestial Data Output</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-2xl p-6 md:p-8 hover:border-violet-500/20 transition-colors">
+                <h3 class="text-2xl font-bold text-white mb-6">Mercury</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-mercury">4.15</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-mercury">4.15</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">88 Earth days</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed">Smallest and fastest planet, with dramatic temperature swings.</p>
+            </div>
+
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-2xl p-6 md:p-8 hover:border-violet-500/20 transition-colors">
+                <h3 class="text-2xl font-bold text-white mb-6">Venus</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-venus">1.63</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-venus">1.63</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">225 Earth days</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed">Earth's twin, shaped by a thick atmosphere and extreme heat.</p>
+            </div>
+
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-2xl p-6 md:p-8 hover:border-violet-500/20 transition-colors relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-900/10 blur-3xl rounded-full"></div>
+                <h3 class="text-2xl font-bold text-white mb-6 relative z-10">Earth</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6 relative z-10">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-earth">1.00</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-earth">1.00</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">365.25 Earth days</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed relative z-10">Our reference planet and the only known world with life.</p>
+            </div>
+
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-2xl p-6 md:p-8 hover:border-violet-500/20 transition-colors">
+                <h3 class="text-2xl font-bold text-white mb-6">Mars</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-mars">0.53</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-mars">0.53</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">687 Earth days</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed">A cold desert planet known for iron-rich terrain.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function calculateYears() {
+            let earthInput = document.getElementById("earthYears").value;
+            let years = parseFloat(earthInput);
+            if(isNaN(years) || years < 0) years = 0;
+
+            const factors = {
+                mercury: 4.15,
+                venus: 1.63,
+                earth: 1.00,
+                mars: 0.5317
+            };
+
+            for (let planet in factors) {
+                let calculated = (years * factors[planet]).toFixed(2);
+                document.getElementById(`age-${planet}`).innerText = calculated;
+                document.getElementById(`rev-${planet}`).innerText = calculated;
+            }
+        }
+    </script>
+</body>
+</html>
