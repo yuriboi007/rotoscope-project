@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotoscoping Study • Ullyzes Zabdiel Olorga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { height: 6px; width: 6px; }
+        ::-webkit-scrollbar-track { background: #050508; }
+        ::-webkit-scrollbar-thumb { background: #1a1a24; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8b5cf6; }
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-[#050508] text-neutral-400 antialiased selection:bg-violet-900 selection:text-white">
+
+    <header class="fixed top-0 w-full z-50 bg-[#050508]/80 backdrop-blur-md border-b border-[#1a1a24] px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <a href="index.html" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-400 hover:text-violet-400 transition-colors flex items-center gap-2">
+                ← Back to Hub
+            </a>
+        </div>
+        <div class="text-sm font-medium tracking-wide text-neutral-300">
+            Case Study <span class="text-violet-500 mx-2">|</span> Rotoscoping
+        </div>
+    </header>
+
+    <main class="pt-24 min-h-[90vh] flex items-center">
+        <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row w-full">
+            
+            <section class="md:w-[55%] p-10 md:p-16 border-r border-[#1a1a24] relative">
+                <div class="absolute top-1/2 left-0 w-[500px] h-[500px] bg-violet-900/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none"></div>
+                <div class="relative z-10">
+                    <p class="text-xs font-bold tracking-[0.3em] text-violet-400 uppercase mb-4">Project 02</p>
+                    <h1 class="text-6xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-6">
+                        Frame <br> By Frame.
+                    </h1>
+                    <p class="text-sm leading-relaxed max-w-sm mb-8">
+                        A definitive study of traced motion and subject isolation. Developed from concept to a final 60-second render output. Authored by Ullyzes Zabdiel Olorga.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#reference" class="px-6 py-3 bg-violet-600 text-white font-semibold rounded-full hover:bg-violet-500 transition shadow-[0_0_20px_rgba(139,92,246,0.3)] text-sm">View Reference</a>
+                        <a href="#archive" class="px-6 py-3 bg-[#0a0a0f] text-white border border-[#2a2a3a] rounded-full hover:border-violet-500/50 transition text-sm">Project Archive</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="md:w-[45%] p-10 md:p-16 flex flex-col justify-center">
+                <p class="text-xs font-bold tracking-[0.2em] text-neutral-500 uppercase mb-5">Final Output Sequence</p>
+                <div class="aspect-video lg:aspect-square xl:aspect-video bg-[#0a0a0f] rounded-[2rem] border border-[#1a1a24] relative flex items-center justify-center group overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.5)]">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-black to-violet-900/10"></div>
+                    <div class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center pl-1 cursor-pointer group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(139,92,246,0.4)] relative z-10">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Reference Video Section (UPDATED with YouTube Embed) -->
+    <section id="reference" class="py-24 px-6 max-w-6xl mx-auto border-t border-[#1a1a24]">
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+            <div class="w-full md:w-1/2">
+                <p class="text-xs font-bold tracking-[0.2em] text-violet-500 uppercase mb-4">Source Material</p>
+                <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight mb-6">Original Reference Video</h2>
+                <p class="text-sm text-neutral-400 leading-relaxed mb-8">
+                    This is the raw, unedited footage used as the baseline for the rotoscoping process. The clear contrast between the subject and the background made it ideal for frame-by-frame isolation in Adobe After Effects.
+                </p>
+            </div>
+            
+            <!-- YouTube Embed Wrapper -->
+            <div class="w-full md:w-1/2 aspect-video bg-[#0a0a0f] rounded-[2rem] border border-[#1a1a24] relative flex items-center justify-center overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] z-10">
+                <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/XK30g3fw5xQ" title="Reference Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Archive Section -->
+    <section id="archive" class="py-24 bg-[#0a0a0f] border-t border-[#1a1a24]">
+        <div class="max-w-7xl mx-auto px-6 mb-12">
+            <h2 class="text-4xl font-black text-white tracking-tight">12-Week Archive</h2>
+            <p class="text-neutral-500 text-sm mt-2">Horizontal scroll to view progress milestones.</p>
+        </div>
+        
+        <div class="w-full overflow-x-auto px-6 pb-8 hide-scroll snap-x snap-mandatory">
+            <div class="flex gap-6 w-max">
+                
+                <!-- WEEK 1 CARD (With Embedded YouTube Video) -->
+                <div class="snap-center shrink-0 w-[300px] aspect-[4/5] bg-[#050508] rounded-3xl p-6 border border-[#1a1a24] hover:border-violet-500/50 transition-colors group flex flex-col justify-end relative overflow-hidden">
+                    
+                    <div class="absolute top-4 left-4 right-4 aspect-video bg-[#12121c] rounded-xl border border-[#1a1a24] overflow-hidden z-20 shadow-md">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/HJH6VhTLBes" title="Week 1 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="relative z-10 mt-auto pointer-events-none">
+                        <span class="text-xs font-bold text-violet-500 uppercase tracking-widest block mb-2">WK 01</span>
+                        <h4 class="text-xl font-bold text-white leading-tight mb-2">Asset Prep</h4>
+                        <p class="text-xs leading-relaxed text-neutral-500">Securing footage and preparing the 60-second sequence for the authoring environment.</p>
+                    </div>
+                </div>
+
+                <!-- WEEK 2 CARD -->
+                <div class="snap-center shrink-0 w-[300px] aspect-[4/5] bg-[#050508] rounded-3xl p-6 border border-[#1a1a24] hover:border-violet-500/50 transition-colors group flex flex-col justify-end relative overflow-hidden">
+                    <div class="absolute top-4 left-4 right-4 aspect-video bg-[#12121c] rounded-xl border border-[#1a1a24] flex items-center justify-center text-xs text-neutral-600 z-20">Thumbnail</div>
+                    
+
+                    <div class="absolute top-4 left-4 right-4 aspect-video bg-[#12121c] rounded-xl border border-[#1a1a24] overflow-hidden z-20 shadow-md">
+                        <iframe class="w-full h-full" src="https://youtube.com/embed/YTt-WaqGg-w" title="Week 1 Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+
+                    <div class="relative z-10 mt-auto pointer-events-none">
+                        <span class="text-xs font-bold text-violet-500 uppercase tracking-widest block mb-2">WK 02</span>
+                        <h4 class="text-xl font-bold text-white leading-tight mb-2">Base Roto</h4>
+                        <p class="text-xs leading-relaxed text-neutral-500">Beginning initial brush passes in AE for the first 10 seconds to lock the baseline rhythm.</p>
+                    </div>
+                </div>
+
+                <!-- WEEK 3 CARD -->
+                <div class="snap-center shrink-0 w-[300px] aspect-[4/5] bg-[#050508] rounded-3xl p-6 border border-[#1a1a24] hover:border-violet-500/50 transition-colors group flex flex-col justify-end relative overflow-hidden">
+                    <div class="absolute top-4 left-4 right-4 aspect-video bg-[#12121c] rounded-xl border border-[#1a1a24] flex items-center justify-center text-xs text-neutral-600 z-20">Thumbnail</div>
+                    
+                    <div class="relative z-10 mt-auto pointer-events-none">
+                        <span class="text-xs font-bold text-violet-500 uppercase tracking-widest block mb-2">WK 03</span>
+                        <h4 class="text-xl font-bold text-white leading-tight mb-2">Stylization</h4>
+                        <p class="text-xs leading-relaxed text-neutral-500">Establishing the base background and testing solid fill techniques for style definition.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
