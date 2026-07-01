@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbital Study • Ullyzes Zabdiel Olorga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#050508] text-neutral-400 antialiased selection:bg-violet-900 selection:text-white">
+
+    <header class="fixed top-0 w-full z-50 bg-[#050508]/80 backdrop-blur-md border-b border-[#1a1a24] px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <a href="index.html" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-400 hover:text-violet-400 transition-colors flex items-center gap-2">
+                ← Back to Hub
+            </a>
+        </div>
+        <div class="text-sm font-medium tracking-wide text-neutral-300">
+            Case Study <span class="text-violet-500 mx-2">|</span> 3D Orbital
+        </div>
+    </header>
+
+    <section class="pt-32 pb-12 px-6 max-w-7xl mx-auto">
+        <p class="text-xs font-bold tracking-[0.3em] text-violet-400 uppercase mb-4">Project 01</p>
+        <h1 class="text-5xl md:text-6xl font-black text-white mb-16 tracking-tight">System Dynamics.</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-[#0a0a0f] border border-[#1a1a24] rounded-2xl p-8 hover:border-violet-500/30 transition-colors">
+                <span class="text-xs font-bold text-neutral-600 uppercase tracking-widest block mb-3">Tools</span>
+                <h3 class="text-xl font-bold text-white mb-3">Software Stack</h3>
+                <p class="text-sm leading-relaxed text-neutral-500">Pipeline used Blender for scene building, keyframing, and rendering, with lightweight post-editing.</p>
+            </div>
+            <div class="bg-[#0a0a0f] border border-[#1a1a24] rounded-2xl p-8 hover:border-violet-500/30 transition-colors">
+                <span class="text-xs font-bold text-neutral-600 uppercase tracking-widest block mb-3">Design</span>
+                <h3 class="text-xl font-bold text-white mb-3">Visual Objective</h3>
+                <p class="text-sm leading-relaxed text-neutral-500">Emphasizes smooth orbital paths, clear focal points, and readable scale relationships between bodies.</p>
+            </div>
+            <div class="bg-[#0a0a0f] border border-[#1a1a24] rounded-2xl p-8 hover:border-violet-500/30 transition-colors">
+                <span class="text-xs font-bold text-neutral-600 uppercase tracking-widest block mb-3">Build</span>
+                <h3 class="text-xl font-bold text-white mb-3">Key Features</h3>
+                <p class="text-sm leading-relaxed text-neutral-500">Final output includes animated camera travel, lighting, and an interactive data calculator below.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col mb-8">
+            <p class="text-xs font-bold tracking-[0.2em] text-violet-500 uppercase mb-3">Final Output Sequence</p>
+            <h2 class="text-3xl font-black text-white tracking-tight">Complete Solar System Render</h2>
+        </div>
+        <div class="aspect-video w-full bg-[#0a0a0f] rounded-[2rem] overflow-hidden border border-[#1a1a24] shadow-[0_0_40px_rgba(0,0,0,0.5)] relative">
+            <iframe class="absolute inset-0 w-full h-full z-20" src="https://www.youtube.com/embed/EKLp3OnxI24?autoplay=1&mute=1&loop=1&playlist=EKLp3OnxI24" title="Final Output Sequence" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="py-12 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <div class="bg-[#0a0a0f] border border-[#1a1a24] rounded-2xl p-8 md:p-10">
+            <span class="text-xs font-bold text-violet-500 uppercase tracking-widest block mb-4">Development</span>
+            <h3 class="text-2xl font-bold text-white mb-6">Production specifics</h3>
+            <ul class="space-y-4 text-sm text-neutral-400">
+                <li class="flex gap-3"><span class="text-violet-500">•</span> Orbital paths were blocked first to lock scene rhythm before camera passes.</li>
+                <li class="flex gap-3"><span class="text-violet-500">•</span> Lighting was tuned for silhouette clarity so each planet remains identifiable.</li>
+                <li class="flex gap-3"><span class="text-violet-500">•</span> Render output was exported at presentation-friendly resolution.</li>
+            </ul>
+        </div>
+
+        <div class="bg-gradient-to-br from-[#0a0a0f] to-[#120a24] border border-violet-900/50 rounded-2xl p-8 md:p-10 relative overflow-hidden shadow-[0_0_40px_rgba(139,92,246,0.1)]">
+            <span class="text-xs font-bold text-violet-400 uppercase tracking-widest block mb-4 relative z-10">Interactive Layer</span>
+            <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Planetary Time Calculator</h3>
+            <p class="text-sm mb-8 relative z-10 text-neutral-400">This utility converts Earth years into equivalent planetary years. Enter a number below to dynamically update the data grid.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-3 relative z-10">
+                <input type="number" id="earthYears" value="1" min="0" class="w-full bg-[#050508] border border-[#2a2a3a] rounded-xl px-4 py-3 text-white focus:outline-none focus:border-violet-500 transition-colors" placeholder="Earth Years">
+                <button onclick="calculateYears()" class="bg-violet-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-violet-500 transition-colors shadow-[0_0_15px_rgba(139,92,246,0.4)] whitespace-nowrap">Calculate</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-black text-white mb-10 tracking-tight border-b border-[#1a1a24] pb-6">Render Gallery & Data</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-3xl p-6 md:p-8 hover:border-violet-500/30 transition-colors group">
+                <div class="aspect-video w-full bg-[#0a0a0f] rounded-2xl mb-6 overflow-hidden border border-[#1a1a24]">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/4_di5vS3oIM?autoplay=1&mute=1&loop=1&playlist=4_di5vS3oIM" title="Mercury Render" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Mercury</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-mercury">4.1500</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-mercury">4.1500</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">88 Earth days</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed">Smallest and fastest planet, with dramatic temperature swings.</p>
+            </div>
+
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-3xl p-6 md:p-8 hover:border-violet-500/30 transition-colors group">
+                <div class="aspect-video w-full bg-[#0a0a0f] rounded-2xl mb-6 overflow-hidden border border-[#1a1a24]">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/3cCV4fsELvM?autoplay=1&mute=1&loop=1&playlist=3cCV4fsELvM" title="Venus Render" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Venus</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-venus">1.6300</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-venus">1.6300</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">225 Earth days</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed">Earth's twin, shaped by a thick atmosphere and extreme heat.</p>
+            </div>
+
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-3xl p-6 md:p-8 hover:border-violet-500/30 transition-colors group relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-900/10 blur-3xl rounded-full"></div>
+                <div class="aspect-video w-full bg-[#0a0a0f] rounded-2xl mb-6 overflow-hidden border border-[#1a1a24] relative z-10">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/SSvKiFX7F_M?autoplay=1&mute=1&loop=1&playlist=SSvKiFX7F_M" title="Earth Render" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4 relative z-10">Earth</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6 relative z-10">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-earth">1.0000</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-earth">1.0000</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">365.25 Earth days</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed relative z-10">Our reference planet and the only known world with life.</p>
+            </div>
+
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-3xl p-6 md:p-8 hover:border-violet-500/30 transition-colors group">
+                <div class="aspect-video w-full bg-[#0a0a0f] rounded-2xl mb-6 overflow-hidden border border-[#1a1a24]">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/vQLE8cQaFyA?autoplay=1&mute=1&loop=1&playlist=vQLE8cQaFyA" title="Mars Render" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Mars</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-mars">0.5317</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-mars">0.5317</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">687 Earth days</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed">A cold desert planet known for iron-rich terrain.</p>
+            </div>
+
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-3xl p-6 md:p-8 hover:border-violet-500/30 transition-colors group">
+                <div class="aspect-video w-full bg-[#0a0a0f] rounded-2xl mb-6 overflow-hidden border border-[#1a1a24]">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/5fPZcsN-OGQ?autoplay=1&mute=1&loop=1&playlist=5fPZcsN-OGQ" title="Jupiter Render" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Jupiter</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-jupiter">0.0843</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-jupiter">0.0843</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">11.86 Earth yrs</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed">The largest gas giant, defined by immense storms and strong gravity.</p>
+            </div>
+
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-3xl p-6 md:p-8 hover:border-violet-500/30 transition-colors group">
+                <div class="aspect-video w-full bg-[#0a0a0f] rounded-2xl mb-6 overflow-hidden border border-[#1a1a24]">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/vYyzwXs_0W4?autoplay=1&mute=1&loop=1&playlist=vYyzwXs_0W4" title="Saturn Render" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Saturn</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-saturn">0.0340</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-saturn">0.0340</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">29.45 Earth yrs</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed">A ringed giant known for striking banding and an iconic silhouette.</p>
+            </div>
+
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-3xl p-6 md:p-8 hover:border-violet-500/30 transition-colors group">
+                <div class="aspect-video w-full bg-[#0a0a0f] rounded-2xl mb-6 overflow-hidden border border-[#1a1a24]">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/AUZlqDED3ZU?autoplay=1&mute=1&loop=1&playlist=AUZlqDED3ZU" title="Uranus Render" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Uranus</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-uranus">0.0119</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-uranus">0.0119</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">84.02 Earth yrs</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed">An ice giant that rotates on its side, giving it an unusual orbital character.</p>
+            </div>
+
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-3xl p-6 md:p-8 hover:border-violet-500/30 transition-colors group">
+                <div class="aspect-video w-full bg-[#0a0a0f] rounded-2xl mb-6 overflow-hidden border border-[#1a1a24]">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/MVWYtER1Rxc?autoplay=1&mute=1&loop=1&playlist=MVWYtER1Rxc" title="Neptune Render" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Neptune</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-neptune">0.0061</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-neptune">0.0061</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">164.79 Earth yrs</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed">A deep blue giant known for powerful winds and distant orbiting.</p>
+            </div>
+
+            <div class="bg-[#050508] border border-[#1a1a24] rounded-3xl p-6 md:p-8 hover:border-violet-500/30 transition-colors group">
+                <div class="aspect-video w-full bg-[#0a0a0f] rounded-2xl mb-6 overflow-hidden border border-[#1a1a24]">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/worg1ypUhp4?autoplay=1&mute=1&loop=1&playlist=worg1ypUhp4" title="Pluto Render" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Pluto</h3>
+                <div class="space-y-3 text-sm text-neutral-400 mb-6">
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Age:</span> <span class="text-white font-medium"><span id="age-pluto">0.0040</span> yrs</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Revolutions:</span> <span class="text-white font-medium" id="rev-pluto">0.0040</span></div>
+                    <div class="flex justify-between border-b border-[#1a1a24] pb-2"><span>Orbital Period:</span> <span class="text-white font-medium">248 Earth yrs</span></div>
+                </div>
+                <p class="text-xs text-neutral-500 leading-relaxed">A dwarf planet at the edge of the system, moving slowly through the outer dark.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-[#1a1a24] bg-[#050508] text-center px-6">
+        <p class="text-neutral-600 text-sm font-medium">
+            Project and contents authored by Ralph Snider Ordonez.
+        </p>
+    </footer>
+
+    <script>
+        function calculateYears() {
+            let earthInput = document.getElementById("earthYears").value;
+            let years = parseFloat(earthInput);
+            if(isNaN(years) || years < 0) years = 0;
+
+            const factors = {
+                mercury: 4.15,
+                venus: 1.63,
+                earth: 1.00,
+                mars: 0.5317,
+                jupiter: 0.0843,
+                saturn: 0.0340,
+                uranus: 0.0119,
+                neptune: 0.0061,
+                pluto: 0.0040
+            };
+
+            for (let planet in factors) {
+                let calculated = (years * factors[planet]).toFixed(4);
+                document.getElementById(`age-${planet}`).innerText = calculated;
+                document.getElementById(`rev-${planet}`).innerText = calculated;
+            }
+        }
+    </script>
+</body>
+</html>
